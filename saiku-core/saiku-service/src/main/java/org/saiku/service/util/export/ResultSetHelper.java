@@ -87,9 +87,26 @@ public class ResultSetHelper {
         }
         break;
       case Types.BIGINT:
-      case Types.DECIMAL:
+        //add by wzk
+        Long ll = rs.getLong(colIndex);
+        if ( ll != null ) {
+          value = this.formatNumber( ll ); //
+        }
+        break;
       case Types.DOUBLE:
+        //add by wzk
+        Double dl = rs.getDouble(colIndex);
+        if ( dl != null ) {
+          value = this.formatNumber( dl ); //
+        }
+        break;
       case Types.FLOAT:
+        Float fl = rs.getFloat(colIndex);
+        if ( fl != null ) {
+          value = this.formatNumber( fl ); //
+        }
+        break;
+      case Types.DECIMAL:
       case Types.REAL:
       case Types.NUMERIC:
         BigDecimal bd = rs.getBigDecimal( colIndex );
