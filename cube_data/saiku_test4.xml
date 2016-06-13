@@ -1,0 +1,29 @@
+<Schema name="test_schema4">
+<cube name="test_cube4">
+    <Table name="data"/>
+    <Dimension name="some_part1" foreignKey="id">
+        <Hierarchy hasAll="true" allMemberName="part_col1" primaryKey="id">
+            <Table name="data"/>
+            <Level name="col_1" column="col_1" uniqueMembers="true" type="Integer"/>
+            <Level name="col_2" column="col_2" uniqueMembers="true" type="Integer"/>
+            <Level name="col_6" column="col_6" uniqueMembers="true" type="Integer"/>
+            <Level name="col_7" column="col_7" uniqueMembers="true" type="Integer"/>
+        </Hierarchy>
+    </Dimension>
+    <Dimension name="some_part2" foreignKey="id">
+        <Hierarchy hasAll="true" allMemberName="part_col1" primaryKey="id">
+            <Table name="data"/>
+            <Level name="col_3" column="col_3" uniqueMembers="true" type="Integer"/>
+            <Level name="col_4" column="col_4" uniqueMembers="true" type="Integer"/>
+            <Level name="col_5" column="col_5" uniqueMembers="true" type="Integer"/>
+        </Hierarchy>
+    </Dimension>
+    <Measure name="sum_es_col_1" column="col_1" aggregator="sum" datatype="Integer"/>
+    <Measure name="avg_es_col_2" column="col_2" aggregator="avg" datatype="Integer"/>
+    <Measure name="cnt_es_col_3" column="col_3" aggregator="count" datatype="Integer"/>
+    <Measure name="max_es_col_4" column="col_4" aggregator="max" datatype="Integer"/>
+    <Measure name="min_es_col_5" column="col_5" aggregator="min" datatype="Integer"/>
+
+</cube>
+</Schema>
+

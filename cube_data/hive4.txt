@@ -1,0 +1,7 @@
+type=OLAP
+name=sql4es_test
+driver=mondrian.olap4j.MondrianOlap4jDriver
+location=jdbc:mondrian:Jdbc=jdbc:sql4es://192.168.88.134:9300/database;Catalog=res:saiku-datasources/saiku_test4.xml;JdbcDrivers=nl.anchormen.sql4es.jdbc.ESDriver
+username=root
+password=
+security.enabled=false
