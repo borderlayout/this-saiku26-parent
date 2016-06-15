@@ -31,7 +31,7 @@ mvn clean install  -Dmaven.test.skip=true -Dmaven.javadoc.skip=true
 echo "Building saiku-ui  ... "
 cd "${saiku_path}"
 cd "saiku-ui"
-#mvn clean package install:install-file -Dmaven.javadoc.skip=true -Dfile=target/saiku-ui-2.6.1-SNAPSHOT.war  -DgroupId=org.saiku -DartifactId=saiku-ui -Dversion=2.6.1-SNAPSHOT -Dpackaging=war
+mvn clean package install:install-file -Dmaven.javadoc.skip=true -Dfile=target/saiku-ui-2.6.1-SNAPSHOT.war  -DgroupId=org.saiku -DartifactId=saiku-ui -Dversion=2.6.1-SNAPSHOT -Dpackaging=war
 
 #-----------------------saiku server----
 echo "Building saiku-server ..."
@@ -48,7 +48,7 @@ cp -f ${saiku_src_datasource}/*  ${saiku_dest_datasource}
 
 #---------------------sql4es compiler and deploy---------
 echo "Build sql4es begin ...."
-sql4es_path="/root/my_workspace/sql4es-project"
+sql4es_path="${saiku_path}/sql4es-project"
 sql4es_jar_path="${sql4es_path}/target/asql2es-1.0.1-jar-with-dependencies.jar"
 
 saiku_webapp_target_path="${saiku_path}/saiku-webapp/target"
