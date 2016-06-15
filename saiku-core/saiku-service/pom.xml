@@ -114,6 +114,32 @@
             </exclusions>
         </dependency>
         <dependency>
+            <groupId>pentaho</groupId>
+            <artifactId>mondrian</artifactId>
+            <version>3.6.5</version>
+
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.servlet</groupId>
+                    <artifactId>jsp-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>pentaho</groupId>
+            <artifactId>mondrian</artifactId>
+            <classifier>sources</classifier>
+            <version>3.6.5</version>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.servlet</groupId>
+                    <artifactId>jsp-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
             <version>3.7</version>

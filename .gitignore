@@ -14,5 +14,6 @@ release.sh
 upgrade_version.sh
 *.swp
 target
+*.war
 
 

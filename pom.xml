@@ -14,8 +14,9 @@
 		<module>saiku-ui</module>    
         <module>saiku-core</module>
 		<module>saiku-webapp</module>
-		<module>saiku-server</module>     
-	</modules>
+		<module>saiku-server</module>
+        <module>sql4es-project</module>
+    </modules>
  	<repositories>
         <repository>
               <id>pentaho-releases</id>
