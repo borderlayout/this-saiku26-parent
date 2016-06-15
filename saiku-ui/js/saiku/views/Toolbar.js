@@ -93,8 +93,15 @@ var Toolbar = Backbone.View.extend({
     /**
      * Go to the issue tracker
      */
+/*
     issue_tracker: function() {
         window.open('https://github.com/OSBI/saiku/issues/new');
+        return false;
+    }
+*/
+
+    issue_tracker: function() {
+        window.open('http://crdc.creditease.cn');
         return false;
     }
 });

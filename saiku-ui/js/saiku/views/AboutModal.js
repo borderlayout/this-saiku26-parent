@@ -17,10 +17,11 @@
 /**
  * The "about us" dialog
  */
-var AboutModal = Modal.extend({
+
+/*var AboutModal = Modal.extend({
     initialize: function() {
         _.extend(this.options, {
-            title: "About " + Settings.VERSION
+            title: "About " + v
         });
     },
 
@@ -35,4 +36,27 @@ var AboutModal = Modal.extend({
     message: Settings.VERSION + "<br>" + 
         "<a  target='_blank' href='http://crdc.creditease.cn'>http://crdc.creditease.cn/</a><br><br>"
         + "Powered by <img width='20px' src='/images/src/meteorite_free.png'  /> <a target='_blank' href='http://crdc.creditease.cn'>http://crdc.creditease.cn/</a> "
+});*/
+
+var showVersion = "Davinci 0.1";
+var AboutModal = Modal.extend({
+    initialize: function() {
+        _.extend(this.options, {
+            title: "About " + showVersion
+        });
+    },
+
+    events: {
+        'click a' : 'dummy'
+    },
+
+    dummy: function() { return true;},
+
+    type: "info",
+
+    message: showVersion + "<br>" +
+    "<a  target='_blank' href='http://crdc.creditease.cn'>http://crdc.creditease.cn/</a><br><br>"
+    + "Powered by <img width='20px' src='/images/src/meteorite_free.png'  /> <a target='_blank' href='http://crdc.creditease.cn'>http://crdc.creditease.cn/</a> "
 });
+
+l
