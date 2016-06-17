@@ -15,6 +15,12 @@ tomcat_app_lib_path="${tomcat_path}/webapps/saiku/WEB-INF/lib"
 
 #cur_path=`pwd`
 saiku_path="/root/my_workspace/saiku-2.6.x"
+
+export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_79
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${PATH}:${JAVA_HOME}/bin:${JRE_HOME}/bin
+
 #----------------------saiku core ------
 echo "Building saiku-core"
 cd "${saiku_path}"
